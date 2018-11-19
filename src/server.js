@@ -8,8 +8,9 @@ import Html from './client/components/Html';
 import App from './client/components/App';
 
 const app = express();
+const scriptPath = process.env.SCRIPT_PATH || path.resolve(__dirname, 'client');
 
-app.use('/script', express.static(path.resolve(__dirname, 'client')));
+app.use('/script', express.static(scriptPath));
 
 app.get('/*', (req, res) => {
   const body = renderToString((

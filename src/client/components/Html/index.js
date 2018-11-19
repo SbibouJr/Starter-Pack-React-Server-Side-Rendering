@@ -4,7 +4,7 @@
  * application code into before sending it to the client as regular HTML.
  * Note we're returning a template string from this function.
  */
-const Html = ({ body, scriptBundle, title = 'Title' }) => `<!DOCTYPE html>
+const Html = ({ body, scriptPath, title = 'Title' }) => `<!DOCTYPE html>
 <html lang="fr">
   <head>
     <meta charset="utf-8" />
