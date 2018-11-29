@@ -22,7 +22,7 @@ And start the serveur with pmd like this:
 npm run start-prod
 ```
 
-Or go to thei `dist` directory and start:
+Or go to the `dist` directory and start:
 
 ```bash
 node server.js

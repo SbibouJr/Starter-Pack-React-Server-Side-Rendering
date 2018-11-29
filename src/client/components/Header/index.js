@@ -2,13 +2,14 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 const Header = () => (
-  <div>
+  <header>
     <NavLink
       activeStyle={{
         fontWeight: "bold",
         color: "red"
       }}
-      to={'/home'}
+      exact
+      to={'/'}
 
     >
       Home
@@ -22,7 +23,7 @@ const Header = () => (
     >
       Info
     </NavLink>
-  </div>
+  </header>
 );
 
 export default Header;

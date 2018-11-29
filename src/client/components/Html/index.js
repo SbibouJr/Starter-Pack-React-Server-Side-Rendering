@@ -4,12 +4,13 @@
  * application code into before sending it to the client as regular HTML.
  * Note we're returning a template string from this function.
  */
-const Html = ({ body, scriptPath, title = 'Title' }) => `<!DOCTYPE html>
+const Html = ({ body, style, title = 'Title'}) => `<!DOCTYPE html>
 <html lang="fr">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width , height=device-height, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
     <link rel="stylesheet" type="text/css" href="style.css"/>
+    ${style}
     <title>${title}</title>
   </head>
   <body>

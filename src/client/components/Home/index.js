@@ -2,7 +2,9 @@ import React from 'react';
 
 const Home = () => (
   <div>
-    Home
+    <h1>
+      Starter-Pack-React-Server-Side-Rendering
+    </h1>
   </div>
 );
 

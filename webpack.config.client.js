@@ -2,7 +2,6 @@ const path = require('path');
 
 module.exports = (env) => {
   const mode = env && env.MODE || 'production';
-  console.log('MODE', mode)
   return {
     entry: './src/client/',
     mode,
@@ -11,6 +10,15 @@ module.exports = (env) => {
         {
           test: /\.js$/,
           loader: 'babel-loader',
+          exclude: /node_modules/,
+        },
+        {
+          test: /\.(css|less)$/,
+          loaders:[
+            'style-loader',
+            'css-loader',
+            'less-loader',
+          ],
           exclude: /node_modules/,
         },
       ],
